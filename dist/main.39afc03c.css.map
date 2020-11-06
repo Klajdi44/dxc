@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.scss"],"names":[],"mappings":"AAEA;EACE;;AAEA;EACE;EACA","file":"main.39afc03c.css","sourceRoot":"..","sourcesContent":["@use './partials/components/asset_landpage.scss';    \n\nbody{\n  background:#333;\n\n  h1{\n    color: #fff;\n    text-align: center;\n  }\n}"]}

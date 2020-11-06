@@ -1,0 +1,30 @@
+// add functions,variables,mixins etc in this file 
+
+
+// example of a variable set
+$colors:(
+  primary:red,
+  secondary:blue,
+);
+
+$fonts:(
+  primary: helvetica,
+  secondary: fantasy,
+);
+
+//combining functions and variable set
+@function color($color){
+  @return map-get($colors, $color )
+}
+// use it like this
+// color(primary or whatever the name of the color is)
+
+@mixin flex-center($direction,$align_position, $justify_position) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align_position;
+  justify-content: $justify_position;
+}
+//use it like this 
+// div{
+// @include flex-center(collumn,center , space-around);}
