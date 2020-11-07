@@ -1,15 +1,43 @@
 // add functions,variables,mixins etc in this file 
 
-
 // example of a variable set
 $colors:(
   primary:red,
   secondary:blue,
 );
 
+  @font-face {
+    font-family: light;
+    src: url(../../fonts/GT-Walsheim-Pro-Light.ttf);
+  }
+  @font-face {
+    font-family: light-obl;
+    src: url(../../fonts/GT-Walsheim-Pro-Light-Oblique.ttf);
+  }
+  @font-face {
+    font-family: regular;
+    src: url(../../fonts/GT-Walsheim-Pro-Regular.ttf);
+  }
+  @font-face {
+    font-family: regular-obl;
+    src: url(../../fonts/GT-Walsheim-Pro-Regular-Oblique.ttf);
+  }
+  @font-face {
+    font-family: bold;
+    src: url(../../fonts/GT-Walsheim-Pro-Bold.ttf);
+  }
+  @font-face {
+    font-family: bold-obl;
+    src: url(../../fonts/GT-Walsheim-Pro-Bold-Oblique.ttf);
+  }
+
 $fonts:(
-  primary: helvetica,
-  secondary: fantasy,
+  light: light,
+  light-obl: light-obl,
+  regular:regular,
+  regular-obl: regular-obl,
+  bold: bold,
+  bold-obl: bold-obl,
 );
 
 //combining functions and variable set
@@ -18,6 +46,12 @@ $fonts:(
 }
 // use it like this
 // color(primary or whatever the name of the color is)
+
+// font function
+@function font($font){
+  @return map-get($fonts, $font )
+}
+
 
 @mixin flex-center($direction,$align_position, $justify_position) {
   display: flex;
