@@ -1,0 +1,71 @@
+@use '../utilities/utilities.scss' as u;
+
+.section-nine {
+  @include u.body-reset;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.section-nine_triangle {
+  position: absolute;
+  top: -27px;
+  right: -80px;
+  width: 45vw;
+}
+
+.section-nine_content {
+  padding: 4em 2em 5em;
+  width: 80%;
+}
+
+.section-nine_content-h {
+  font-size: u.font-size(heading);
+  font-family: u.font(bold);
+}
+
+.section-nine_content-p {
+  @include u.flex-center(column, center, center);
+  font-size: u.font-size(body);
+  font-family: u.font(regular);
+}
+
+.section-nine_content-p p {
+  width: auto;
+}
+
+.section-nine_content-p > p:first-child {
+  padding-right: 2em;
+}
+
+.section-nine_image {
+  height: 50vh;
+  background-image: url("/images/image--008.jpg");
+  background-position: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .section-nine_triangle {
+    right: -150px;
+  }
+
+  .section-nine_content-p {
+    @include u.flex-center(row, flex-start, flex-start);
+  }
+
+  .section-nine_content-p p {
+    width: 45vw;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .section-nine_content {
+    padding: 4em 9em 10em;
+  }
+
+  .section-nine_content-p p {
+    width: 25vw;
+  }
+}
