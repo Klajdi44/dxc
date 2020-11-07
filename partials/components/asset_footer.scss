@@ -1,0 +1,95 @@
+@use '../utilities/utilities.scss' as u;
+
+footer {
+  @include u.body-reset;
+
+  font-size: u.font-size(subhead);
+}
+
+.footer_link {
+  @include u.flex-center(row, center, center);
+}
+
+.footer_link-logo {
+  width: 4em;
+  float: left;
+}
+
+.footer_link-header {
+  font-family: u.font(bold);
+}
+
+.footer_link-link {
+  font-size: u.font-size(subhead);
+  font-family: u.font(regular);
+  color: black;
+  text-decoration: none;
+}
+
+.footer_info {
+  padding: 5em 2em;
+  @include u.flex-center(column, flex-start, center);
+}
+
+.footer_info-contacts {
+  padding: 2em 2em 2em 0;
+  width: auto;
+  font-family: u.font(regular);
+}
+
+.footer_info-contacts p {
+  margin: 0;
+}
+
+.footer_info-contacts p:first-child {
+  font-family: u.font(bold);
+}
+
+.footer_info-contacts-icons {
+  padding: 1em 0;
+}
+
+.footer_info-contacts-icons img {
+  padding: 0.5em;
+  width: 1.5em;
+}
+
+.footer_info-contacts-icons img:first-child {
+  padding-left: 0;
+}
+
+.footer_info-description {
+  width: 100%;
+}
+
+.footer_info-description-h {
+  font-family: u.font(bold);
+}
+
+.footer_info-description-p {
+  font-family: u.font(regular);
+}
+
+span {
+  font-family: u.font(regular);
+}
+
+@media only screen and (min-width: 768px) {
+  .footer_info {
+    @include u.flex-center(row, center, center);
+  }
+
+  .footer_info-description {
+    width: 55vw;
+  }
+
+  .footer_info-contacts {
+    width: 25vw;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .footer_info {
+    padding: 5em 9em 10em;
+  }
+}

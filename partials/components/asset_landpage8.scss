@@ -4,8 +4,6 @@
   @include u.body-reset;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center bottom;
 }
 
 .section-eight_content {
@@ -44,7 +42,7 @@
 
 .section-eight_icons {
   padding: 5em 0;
-  background-color: map-get(u.$colors, light-gray);
+  background-color: u.color(light-gray);
 }
 
 .section-eight_icons > img {
