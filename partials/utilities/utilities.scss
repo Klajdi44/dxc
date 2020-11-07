@@ -2,8 +2,10 @@
 
 // example of a variable set
 $colors: (
-  primary: red,
-  secondary: blue,
+  dark-gray: #666666,
+  light-gray: #d9d9d9,
+  purple: #6f2c91,
+  blue: #0067b3,
 );
 
 @font-face {

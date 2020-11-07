@@ -44,10 +44,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .section-seven_icons {
-    // padding: 0 5em 30em 5em;
-  }
-
   .section-seven_icons > img {
     content: url("/images/section-seven-desk.svg");
   }
@@ -64,10 +60,6 @@
 }
 
 @media only screen and (min-width: 1200px) {
-  .section-seven_icons {
-    // padding: 0 15em 50em 15em;
-  }
-
   .section-seven_content-p {
     column-count: 3;
   }
