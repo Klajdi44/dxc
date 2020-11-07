@@ -40,6 +40,15 @@ $fonts: (
   bold-obl: bold-obl,
 );
 
+$font-sizes: (
+  heading: 34pt,
+  subtitle: 18pt,
+  section-heading: 20pt,
+  section-subtitle: 16pt,
+  body: 13pt,
+  subhead: 12pt,
+);
+
 //combining functions and variable set
 @function color($color) {
   @return map-get($colors, $color);
@@ -52,6 +61,10 @@ $fonts: (
   @return map-get($fonts, $font);
 }
 
+@function font-size($font-size) {
+  @return map-get($font-sizes, $font-size);
+}
+
 @mixin flex-center($direction, $align_position, $justify_position) {
   display: flex;
   flex-direction: $direction;
@@ -61,3 +74,10 @@ $fonts: (
 //use it like this
 // div{
 // @include flex-center(collumn,center , space-around);}
+
+@mixin body-reset {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}

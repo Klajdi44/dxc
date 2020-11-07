@@ -1,0 +1,57 @@
+@use '../utilities/utilities.scss' as u;
+
+.section-six {
+  @include u.body-reset;
+  width: 100%;
+  background-image: url("/images/image--005.jpg");
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.section-six_content-h {
+  padding: 2em;
+  font-size: u.font-size(subhead);
+  font-family: u.font(bold);
+}
+
+.section-six_content-p {
+  padding: 1em;
+  font-size: u.font-size(body);
+  font-family: u.font(regular);
+}
+
+.section-six_icons {
+  padding: 0 5em 50em 5em;
+}
+
+.section-six_icons > img {
+  width: 100%;
+  height: 100%;
+  content: url("/images/section-six-mobile.svg");
+}
+
+@media only screen and (min-width: 768px) {
+  .section-six_icons {
+    padding: 0 5em 30em 5em;
+  }
+
+  .section-six_icons > img {
+    content: url("/images/section-six-desk.svg");
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .section-six_content-h {
+    padding: 2em 10em;
+  }
+
+  .section-six_content-p {
+    padding: 1em 9em;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .section-six_icons {
+    padding: 0 15em 50em 15em;
+  }
+}
