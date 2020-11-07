@@ -3,6 +3,7 @@
 .section-six {
   @include u.body-reset;
   width: 100%;
+  height: 100%;
   background-image: url("/images/image--005.jpg");
   background-size: cover;
   background-position: center bottom;
@@ -16,7 +17,7 @@
 
 .section-six_content-p {
   padding: 1em;
-  font-size: u.font-size(body);
+  font-size: u.font-size(section-subtitle);
   font-family: u.font(regular);
 }
 

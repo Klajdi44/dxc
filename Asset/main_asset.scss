@@ -1,6 +1,7 @@
 @use '../partials/utilities/utilities.scss' as u;
 @use '../partials/components/asset_landpage.scss';
 @use '../partials/components/asset_landpage6.scss';
+@use '../partials/components/asset_landpage7.scss';
 
 body {
   @include u.body-reset;

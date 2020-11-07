@@ -1,0 +1,74 @@
+@use '../utilities/utilities.scss' as u;
+
+.section-seven {
+  @include u.body-reset;
+  position: relative;
+  width: 100%;
+  background-image: url("/images/image--004.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.section-seven_triangle {
+  position: absolute;
+  top: -27px;
+  left: 100px;
+  width: 5em;
+}
+
+.section-seven_content {
+  padding: 1em;
+}
+
+.section-seven_content-h {
+  font-size: u.font-size(heading);
+  font-family: u.font(bold);
+  text-align: center;
+}
+
+.section-seven_content-p {
+  font-size: u.font-size(body);
+  font-family: u.font(regular);
+  column-count: 1;
+  column-gap: 2em;
+}
+
+.section-seven_icons {
+  padding: 5em 5em 10em;
+}
+
+.section-seven_icons > img {
+  width: 100%;
+  height: 100%;
+  content: url("/images/section-seven-mobile.svg");
+}
+
+@media only screen and (min-width: 768px) {
+  .section-seven_icons {
+    // padding: 0 5em 30em 5em;
+  }
+
+  .section-seven_icons > img {
+    content: url("/images/section-seven-desk.svg");
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .section-seven_content {
+    padding: 1em 10em;
+  }
+
+  .section-seven_content-p {
+    column-count: 2;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .section-seven_icons {
+    // padding: 0 15em 50em 15em;
+  }
+
+  .section-seven_content-p {
+    column-count: 3;
+  }
+}
