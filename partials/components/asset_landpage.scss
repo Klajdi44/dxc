@@ -1,3 +1,87 @@
 @use '../utilities/utilities.scss' as u;
 
-//use u infront of every function or variable name
+.hero{
+  height: 100vh;
+  width: 100vw;
+  background:
+  // linear-gradient(to right,rgba(black, .2), rgba(black, .2)),
+   url(/images/bus_glassbuilding_c_hi.jpg);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  z-index: 0;
+
+  .hero-left-col{
+    height: 100%;
+    margin: 2em 2em;
+  }
+   
+   h1{
+     font-family: u.font(bold);
+     font-size: 30pt
+   }
+   h3{
+     font-family: u.font(bold);
+     font-size: u.font-size(section-heading);
+
+   }
+  .logo{
+    max-width: 70%;
+    margin-top: 1em;
+  }
+
+
+  .triangle{
+    z-index: -1;
+    position: absolute;
+    transform: rotate(180deg);
+    max-height: 90%;
+    top: -1%;
+    right: -9%;
+  }
+}
+
+.second-page{
+  width: 100vw;
+
+  .second-page-wrapper{
+    margin: 2em;
+  }
+
+  .second-page-wrapper p{
+    font-family: u.font(regular);
+  }
+
+ 
+
+  .gray-bg{
+    background: #DCDDDE;
+    font-size: u.font-size(section-subtitle);
+    padding: 1em 2em;
+     margin: 1em -2em;
+   }
+
+  h1{
+    font-family: u.font(bold);
+     font-size: 30pt
+    }
+
+   h3{
+    font-family: u.font(bold);
+    font-size: u.font-size(section-heading);
+   }
+}
+
+.third-page{
+  width: 100vw;
+
+  .third-page-wrapper{
+    margin: 2em;
+  }
+
+  .third-page-img-owl{
+ width: 100%;
+}
+
+
+}

@@ -1,1 +1,8 @@
 @use '../partials/components/asset_landpage.scss';
+@use '../partials/utilities/utilities.scss' as u;
+
+html,body{
+  @include u.body-reset;
+  font-size: u.font-size(body);
+
+}
