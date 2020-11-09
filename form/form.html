@@ -15,9 +15,9 @@
     <form>
       <fieldset>
         <div>
-          <label for="name">Full name</label>
+          <label for="full-name">Full name</label>
           <span>Enter your first and last name</span>
-          <input type="text" name="name" id="name" required placeholder=" " minlength="2" />
+          <input type="text" name="full-name" id="full-name" required placeholder=" " minlength="2" />
         </div>
 
         <div>
@@ -33,9 +33,9 @@
         </div>
 
         <div>
-          <label for="jobtitle">Job title</label>
+          <label for="job-title">Job title</label>
           <span>e.g. Project Manager</span>
-          <input type="text" name="jobtitle" id="jobtitle" required placeholder=" " minlength="2" />
+          <input type="text" name="job-title" id="job-title" required placeholder=" " minlength="2" />
         </div>
 
         <div>
@@ -46,6 +46,11 @@
             <option value="two">Two</option>
             <option value="three">Three</option>
           </select>
+        </div>
+
+        <div class="form-group checkbox">
+          <span>Long thingy</span>
+          <input type="checkbox" name="consent" id="consent" value="consent" />
         </div>
       </fieldset>
 
