@@ -1,62 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="main_form.scss" />
-    <title>DXC form</title>
-  </head>
 
-  <body>
-    <img src="" alt="" />
-    <h1></h1>
-    <p></p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="main_form.scss" />
+  <title>DXC form</title>
+</head>
 
-    <form>
-      <fieldset>
-        <div>
-          <label for="full-name">Full name</label>
-          <span>Enter your first and last name</span>
-          <input type="text" name="full-name" id="full-name" required placeholder=" " minlength="2" />
-        </div>
+<body>
+  <img src="" alt="" />
+  <h1></h1>
+  <p></p>
 
-        <div>
-          <label for="email">Email</label>
-          <span>e.g. johndoe@company.com</span>
-          <input type="email" name="email" id="email" required placeholder=" " />
-        </div>
+  <form>
+    <fieldset>
+      <div>
+        <label for="full-name">Full name</label>
+        <span>Enter your first and last name</span>
+        <input type="text" name="full_name" id="full-name" required placeholder=" " minlength="2" />
+      </div>
 
-        <div>
-          <label for="company">Company</label>
-          <span>What is the name of the company you work at?</span>
-          <input type="text" name="company" id="company" required placeholder=" " minlength="2" />
-        </div>
+      <div>
+        <label for="email">Email</label>
+        <span>e.g. johndoe@company.com</span>
+        <input type="email" name="email" id="email" required placeholder=" " />
+      </div>
 
-        <div>
-          <label for="job-title">Job title</label>
-          <span>e.g. Project Manager</span>
-          <input type="text" name="job-title" id="job-title" required placeholder=" " minlength="2" />
-        </div>
+      <div>
+        <label for="company">Company</label>
+        <span>What is the name of the company you work at?</span>
+        <input type="text" name="company" id="company" required placeholder=" " minlength="2" />
+      </div>
 
-        <div>
-          <label for="country">Country</label>
-          <span>What is your country of residence?</span>
-          <select name="country" id="country" required>
-            <option value="one">One</option>
-            <option value="two">Two</option>
-            <option value="three">Three</option>
-          </select>
-        </div>
+      <div>
+        <label for="job-title">Job title</label>
+        <span>e.g. Project Manager</span>
+        <input type="text" name="job_title" id="job-title" required placeholder=" " minlength="2" />
+      </div>
 
-        <div class="form-group checkbox">
-          <span>Long thingy</span>
-          <input type="checkbox" name="consent" id="consent" value="consent" />
-        </div>
-      </fieldset>
+      <div>
+        <label for="country">Country</label>
+        <span>What is your country of residence?</span>
+        <select name="country" id="country" required>
+          <option value="one">One</option>
+          <option value="two">Two</option>
+          <option value="three">Three</option>
+        </select>
+      </div>
 
-      <button>Download</button>
-    </form>
+      <div class="form-group checkbox">
+        <span>Long thingy</span>
+        <input type="checkbox" name="consent" id="consent" value="consent" />
+      </div>
+    </fieldset>
 
-    <script src="form.js"></script>
-  </body>
+    <button>Download</button>
+  </form>
+
+  <script src="form.js"></script>
+</body>
+
 </html>
