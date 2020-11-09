@@ -1,0 +1,210 @@
+@use '../utilities/utilities.scss' as u;
+
+body {
+  @include u.body-reset;
+  width: 100%;
+  height: 100%;
+}
+
+.flex-wrapper {
+  @include u.flex-center(column-reverse, stretch, flex-start);
+}
+
+.form-content {
+  width: 70vw;
+  padding: 0 2em 2em;
+  font-size: u.font-size(body);
+  font-family: u.font(regular);
+}
+
+.form-content h1 {
+  font-size: u.font-size(heading);
+  font-family: u.font(bold);
+  color: u.color(purple);
+}
+
+.form-content p {
+  padding: 1em 0 2em;
+}
+
+form {
+  text-align: center;
+}
+
+fieldset {
+  text-align: left;
+  border: none;
+  padding: 0 0 2em 0;
+}
+
+label,
+.form-span {
+  display: block;
+}
+
+label {
+  font-size: u.font-size(subhead);
+  font-family: u.font(bold);
+  padding: 2em 0 0;
+}
+
+.checkbox {
+  display: inline-block;
+}
+
+.checkbox input {
+  margin: 3em 2em 2em 0;
+}
+
+.checkbox label {
+  width: 70%;
+}
+
+.checkbox label,
+.checkbox input {
+  display: inline-block;
+}
+
+.form-group:focus-within small {
+  color: rgb(16, 186, 243);
+}
+
+input,
+select {
+  transition: 0.5s;
+}
+
+select {
+  height: 30px;
+  width: 95%;
+  border: 2px solid rgb(190, 190, 190);
+  outline: 1px solid transparent;
+  border-radius: 20px;
+  padding: 0.4em;
+}
+
+input:not([type="checkbox"]) {
+  height: 20px;
+  width: 90%;
+  border: 2px solid rgb(190, 190, 190);
+  outline: 1px solid transparent;
+  border-radius: 20px;
+  font-size: 1em;
+  padding: 0.4em;
+}
+
+input[type="checkbox"] {
+  display: inline;
+  height: 20px;
+  width: 20px;
+}
+
+input:focus,
+select:focus {
+  border-radius: 20px;
+  border: 2px solid u.color(purple);
+  box-shadow: none;
+}
+
+input:not(:placeholder-shown):not(:focus):invalid,
+select:not(:placeholder-shown):not(:focus):invalid {
+  border: 2px solid red;
+  animation: shake 1s linear;
+}
+
+input:not(:focus):valid,
+select:not(:focus):valid {
+  border: 2px solid green;
+}
+
+.form-span {
+  margin-bottom: 0.5em;
+  color: rgb(119, 105, 105);
+  font-size: 16px;
+  line-height: 160%;
+}
+
+.form-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  margin-left: 1.2em;
+  background: u.color(purple);
+  font-family: u.font(bold);
+  color: white;
+}
+
+/* animations */
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.thumbnail {
+  height: 30vh;
+  width: 100%;
+  background-image: url("/images/city_clouds.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.form-footer {
+  padding: 4em 2em;
+  text-align: center;
+}
+
+.form-footer a {
+  text-decoration: none;
+  color: black;
+  font-family: u.font(regular);
+  font-size: u.font-size(subhead);
+}
+
+@media only screen and (min-width: 768px) {
+  .flex-wrapper {
+    @include u.flex-center(row, stretch, flex-start);
+  }
+
+  .form-content {
+    padding: 0 4em 4em 4em;
+  }
+  .form-btn {
+    width: 30%;
+    font-size: u.font-size(subhead);
+  }
+
+  .form-logo {
+    width: 20em;
+  }
+
+  select {
+    width: 52%;
+  }
+
+  input:not([type="checkbox"]) {
+    width: 50%;
+  }
+
+  .thumbnail {
+    height: auto;
+    width: 30vw;
+  }
+}
