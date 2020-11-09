@@ -1,17 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main_form.scss" />
+    <title>DXC form</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="main_form.scss">
-  <title>DXC form</title>
-</head>
+  <body>
+    <img src="" alt="" />
+    <h1></h1>
+    <p></p>
 
-<body>
+    <form>
+      <fieldset>
+        <div>
+          <label for="name">Full name</label>
+          <span>Enter your first and last name</span>
+          <input type="text" name="name" id="name" required placeholder=" " minlength="2" />
+        </div>
 
-  <script src="form.js"></script>
+        <div>
+          <label for="email">Email</label>
+          <span>e.g. johndoe@company.com</span>
+          <input type="email" name="email" id="email" required placeholder=" " />
+        </div>
 
-</body>
+        <div>
+          <label for="company">Company</label>
+          <span>What is the name of the company you work at?</span>
+          <input type="text" name="company" id="company" required placeholder=" " minlength="2" />
+        </div>
 
+        <div>
+          <label for="jobtitle">Job title</label>
+          <span>e.g. Project Manager</span>
+          <input type="text" name="jobtitle" id="jobtitle" required placeholder=" " minlength="2" />
+        </div>
+
+        <div>
+          <label for="country">Country</label>
+          <span>What is your country of residence?</span>
+          <select name="country" id="country" required>
+            <option value="one">One</option>
+            <option value="two">Two</option>
+            <option value="three">Three</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <button>Download</button>
+    </form>
+
+    <script src="form.js"></script>
+  </body>
 </html>
