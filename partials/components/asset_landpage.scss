@@ -1,3 +1,300 @@
 @use '../utilities/utilities.scss' as u;
 
-//use u infront of every function or variable name
+p{
+  line-height: 160%;
+}
+h1{
+  font-family: u.font(bold);
+   font-size: u.font-size(heading)
+  }
+  h3{
+    font-family: u.font(bold);
+    font-size: u.font-size(section-heading);
+  }
+  h4{
+    font-family: u.font(bold);
+    font-size: u.font-size(section-subtitle);
+  }  
+.hero{
+  height: 100vh;
+  width: 100vw;
+  background:
+  // linear-gradient(to right,rgba(black, .2), rgba(black, .2)),
+   url(/images/bus_glassbuilding_c_hi.jpg);
+  background-size: cover;
+  background-position: center center;
+  z-index: 0;
+  position: relative;
+
+
+  .hero-left-col{
+    height: 100%;
+    margin: 2em 2em;
+  }
+   
+   h1{
+     font-family: u.font(bold);
+     font-size: 30pt
+   }
+ 
+  .logo{
+    max-width: 70%;
+    margin-top: 1em;
+  }
+
+
+  .triangle{
+    z-index: -1;
+    position: absolute;
+    transform: rotate(180deg);
+    max-height: 90%;
+    top: -1%;
+    right: -20%;
+  }
+}
+
+.ladder{
+  height: 100vh;
+  width: 100vw;
+  background: url(/images/image--001.jpg);
+  background-size: cover;
+  background-position: bottom;
+   background-attachment: fixed;
+ 
+  h1,h4{
+color: #fff;
+  }
+
+  .ladder-wrapper{
+    margin: 2em;
+    height: 100%;
+  }
+
+  h4{
+   position: relative;
+   top: 5%;
+  }
+
+  h1{
+    position: relative;
+    top: 30%;
+  }
+
+
+ 
+}
+
+.second-page{
+  width: 100vw;
+
+  .second-page-wrapper{
+    margin: 2em;
+  }
+
+  .second-page-wrapper p{
+    font-family: u.font(regular);
+  }
+
+ 
+
+  .bg{
+    background: #DCDDDE;
+    font-size: u.font-size(section-subtitle);
+    padding: 1em 2em;
+     margin: 1em -2em;
+   }
+
+}
+
+.third-page{
+  max-width: 1600px;
+  margin: 2em auto;
+  
+ 
+
+  .third-page-wrapper{
+    margin: 2em;
+  }
+
+  .third-page-img-owl{
+ width: 100%;
+}
+}
+
+.fourth-page{
+  max-width: 1600px;
+  margin: 2em auto;
+}
+
+.fourth-page-wrapper{
+  margin: 2em;
+}
+
+.tri-dxc{
+  height: 100%;
+  width: 100%;
+}
+
+// media queries 
+@media only screen and (min-width: 768px){
+
+  .hero{
+    column-count: 2;
+
+
+    .logo{
+    max-width: 50%;
+    }
+
+    .triangle{
+    right: 20%;
+    }
+
+    
+  }
+
+  .ladder{
+    h1{
+      left: 60%;
+      top: 20%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px){
+  .hero{
+
+    .triangle{
+      right:30%;
+      max-height: 100%;
+    }
+  }
+
+  .ladder{
+    background-position: left;
+  }
+
+  .second-page{
+    max-width: 1200px;
+    margin: 5em auto;
+
+    
+  }
+
+
+  .second-page-p{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "row-1 row-2"
+    "row-3 row-4"
+    "row-3 row-4"
+    "row-5 row-6";
+    gap: 0 1.5em;
+
+
+    .row-1{
+      grid-area: row-1;
+    }
+
+   .row-2{
+    grid-area: row-2;
+   }
+
+   .row-3{
+    grid-area: row-3;
+
+   }
+   .row-4{
+    grid-area: row-4;
+   }
+
+   .row-5{
+    grid-area: row-5;
+   }
+
+   .row-6{
+    grid-area: row-6;
+
+   } }
+
+  // third page
+.third-page{
+  margin: 3em auto;
+}
+
+   .third-page-p{
+     display: grid;
+     gap: 1em 0em;
+     grid-template-columns: repeat(3,1fr);
+     grid-template-areas: 
+     ". row-1 row-1 "
+     ". row-2 row-3 ";
+
+     h1{
+       max-width: 20ch;
+     }
+     p{
+       max-width: 45ch;
+     }
+
+
+   
+
+   .row-1{
+     grid-area: row-1;
+   }
+   .row-2{
+     grid-area: row-2;
+
+      
+   }
+   .row-3{
+     grid-area: row-3;
+     
+   }
+  }
+
+
+  .fourth-page-p{
+    display: grid;
+    gap: 3em 1em;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas:
+    "col-1 col-2 col-3";
+    
+    p{
+      max-width: 40ch;
+    }
+    h4{
+      max-width: 27ch;
+    }
+      
+    .col-1{
+      grid-area: col-1;
+    }
+    .col-2{
+      grid-area: col-2;
+    }
+    .col-3{
+      grid-area: col-3;
+    }
+  }
+}
+
+@media only screen and (min-width: 1400px){
+  .hero{
+    overflow: hidden;
+
+    .logo{
+      margin-top: 4em;
+    }
+  
+
+    .triangle{
+      right:45%;
+      max-height: 150%;
+    }
+  }
+}
+

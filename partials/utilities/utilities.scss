@@ -41,6 +41,15 @@ $fonts: (
   bold: bold,
   bold-obl: bold-obl,
 );
+$font-sizes: (
+  heading: 34pt,
+  subtitle: 18pt,
+  section-heading: 20pt,
+  section-subtitle: 16pt,
+  body: 13pt,
+  subhead: 12pt,
+);
+
 
 $font-sizes: (
   heading: 34pt,
@@ -72,6 +81,13 @@ $font-sizes: (
   flex-direction: $direction;
   align-items: $align_position;
   justify-content: $justify_position;
+}
+
+@mixin body-reset {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 //use it like this
 // div{
