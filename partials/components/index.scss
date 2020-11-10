@@ -1,6 +1,13 @@
 @use '/partials/utilities/utilities.scss' as u;
 
 //global
+body,html{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
 a{
 text-decoration: none;
 cursor: pointer;
@@ -8,8 +15,8 @@ cursor: pointer;
 
 .btn{
   max-width: 400px;
-  padding: 10px 30px;
-  font-size:20px;
+  padding: 20px 50px;
+  font-size:16px;
   font-family: u.font(bold);
   background: u.color(purple);
   color: #fff;
@@ -29,4 +36,142 @@ cursor: pointer;
   background: #000;
   color: #fff;
 }
+
+.section{
+  padding: 2em 5%;
+  
+  h3{
+    font-size: u.font-size(section-heading);
+    font-family: u.font(bold);
+  }
+  p{
+    font-family: u.font(regular);
+    font-size: u.font-size(body);
+  }
+}
+.section-seven,.section-nine{
+  background: u.color(light-gray);
+}
+
+.section-wrapper{
+img{
+    max-width: 100%;
+
+  }
+}
+
+
+.footer-dark{
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  button{
+    margin-top: .5em;
+  }
+}
+
+.footer{
+  color: gray;
+  li{
+    list-style: none;
+    color: gray;
+    cursor: pointer;
+  }
+ 
+}
+// MEDIA QUERIES
+@media only screen and (min-width: 768px){
+  .section{
+    margin: 0 auto;
+  }
+
+
+  .section-wrapper{
+    display: flex;
+    gap: 3em;
+
+
+    img{
+      max-width: 350px;
+     margin-top: 2em;
+    }
+  }
+
+  .reverse{
+    display: flex;
+    flex-direction: row-reverse;;
+    padding: 15px;
+    vertical-align: middle;
+    justify-content: flex-start;
+    gap: 3em;
+  }
+
+  .text-content{
+    width: 60%;
+  }
+  
+.footer {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+
+  p{
+font-size: 12px;
+  }
+  .footer-links{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ width: 30%;
+
+  }
+  
+ 
+}
+
+}
+
+
+@media only screen and (min-width: 1024px){
+
+  .section-wrapper{
+    max-width: 1200px;
+    padding: 15px;
+    gap: 5.5em;
+
+
+    img{
+      max-width: 450px;
+      margin: 0 auto;
+    }
+  }
+
+  .reverse{
+    gap: 5.5em;
+  }
+
+  .text-content{
+    width: 40%;
+    padding: 15px;
+  }
+  .img-content{
+    margin-left:2.4em;
+  }
+  
+  .footer{
+    .footer-links{
+      width: 14%;
+    }
+  }
+  
+
+}
+
+
+
+
 
