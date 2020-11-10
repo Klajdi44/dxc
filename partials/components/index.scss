@@ -1,0 +1,32 @@
+@use '/partials/utilities/utilities.scss' as u;
+
+//global
+a{
+text-decoration: none;
+cursor: pointer;
+}
+
+.btn{
+  max-width: 400px;
+  padding: 10px 30px;
+  font-size:20px;
+  font-family: u.font(bold);
+  background: u.color(purple);
+  color: #fff;
+  border: none;
+  transition: all .3s;
+  cursor: pointer;
+  
+
+  &:hover{
+    background: transparent;
+    border: 2px solid u.color(purple);
+    color: #000;
+  }
+}
+
+.dark:hover{
+  background: #000;
+  color: #fff;
+}
+

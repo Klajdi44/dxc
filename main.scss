@@ -1,9 +1,6 @@
 @use './partials/utilities/utilities.scss' as u;
 @use './partials/components/asset_landpage.scss';
-
-body {
-  background: #333;
-}
+@use './partials/components/index.scss';
 
 h1 {
   font-family: u.font(bold);
