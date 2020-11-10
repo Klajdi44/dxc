@@ -178,6 +178,15 @@ select:not(:focus):valid {
   font-size: u.font-size(subhead);
 }
 
+.not-valid{
+  // font-size: 1em;
+  color: red;
+}
+
+.fa-spin{
+  color:#fff;
+}
+
 @media only screen and (min-width: 768px) {
   .flex-wrapper {
     @include u.flex-center(row, stretch, flex-start);
