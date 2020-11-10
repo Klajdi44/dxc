@@ -1,32 +1,213 @@
 @use '/partials/utilities/utilities.scss' as u;
 
 //global
-a{
-text-decoration: none;
-cursor: pointer;
+a {
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.btn{
+//Header
+.header {
+  @include u.flex-center(column-reverse, flex-start, flex-end);
+  background: #1271b9;
+  color: #fff;
+}
+
+.header-content {
+  padding: 2rem;
+}
+
+.header-image {
+  margin: 0;
+  padding: 0;
+  min-height: 0;
+}
+
+.header-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.header-logo {
+  width: 50%;
+}
+
+.header-h {
+  margin: 1em 0;
+  font-family: u.font(bold);
+  font-size: 48pt;
+}
+
+.header-p {
+  font-family: u.font(regular);
+  font-size: u.font-size(section-heading);
+}
+
+//Header-sub
+.header-sub {
+  background-color: u.color(light-gray);
+}
+
+.header-sub,
+.main-section-three {
+  padding: 4em;
+  text-align: center;
+}
+
+.header-sub h2,
+.main-section-three h2 {
+  font-family: u.font(bold);
+  font-size: u.font-size(section-heading);
+}
+
+.header-sub p,
+.main-section-three p {
+  font-family: u.font(regular);
+  font-size: u.font-size(body);
+}
+
+//Sections
+.main-section-one,
+.main-section-four {
+  padding: 4em 0em;
+  @include u.flex-center(column-reverse, center, center);
+}
+
+.main-section-two {
+  padding: 4em 0;
+  @include u.flex-center(column, center, center);
+}
+
+.main-section-two,
+.main-section-four {
+  background-color: u.color(light-gray);
+}
+
+.main-section-one div,
+.main-section-two div,
+.main-section-four div {
+  padding: 0 2em;
+}
+
+.main-section-one div h2,
+.main-section-two div h2,
+.main-section-four div h2 {
+  font-family: u.font(bold);
+  font-size: u.font-size(section-heading);
+}
+
+.main-section-one div p,
+.main-section-two div p,
+.main-section-four div p {
+  font-family: u.font(regular);
+  font-size: u.font-size(body);
+}
+
+.main-section-one figure img,
+.main-section-two figure img,
+.main-section-four figure img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+//iframes
+
+.iframe-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+}
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
   max-width: 400px;
   padding: 10px 30px;
-  font-size:20px;
+  font-size: 20px;
   font-family: u.font(bold);
   background: u.color(purple);
   color: #fff;
-  border: none;
-  transition: all .3s;
+  border: 2px solid transparent;
+  transition: all 0.3s;
   cursor: pointer;
-  
 
-  &:hover{
+  &:hover {
     background: transparent;
     border: 2px solid u.color(purple);
     color: #000;
   }
 }
 
-.dark:hover{
+.dark:hover {
   background: #000;
   color: #fff;
 }
 
+@media only screen and (min-width: 768px) {
+  .section-ten_content-p {
+    @include u.flex-center(row, flex-start, flex-end);
+  }
+
+  .header {
+    display: grid;
+    grid: auto-flow 1fr / 1fr 8rem 1fr;
+    background: #1271b9;
+    color: #fff;
+    align-items: normal;
+  }
+
+  .header::after {
+    content: "";
+    grid-area: 1 / 2;
+    background: linear-gradient(to bottom right, #1271b9 50%, transparent 0);
+  }
+
+  .header > * {
+    grid-row: 1;
+  }
+
+  .header-content {
+    grid-column: 1 / 3;
+    padding-right: 6rem;
+    align-self: center;
+    z-index: 1;
+  }
+
+  .header-image {
+    grid-column: 2 / 4;
+  }
+
+  .header-image img {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .header-wrapper {
+    display: grid;
+    grid-auto-rows: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .header-sub,
+  .main-section-three {
+    padding: 4em 15em;
+  }
+
+  .main-section-one,
+  .main-section-two,
+  .main-section-four {
+    @include u.flex-center(row, center, center);
+  }
+
+  .main-section-one div,
+  .main-section-two div,
+  .main-section-four div {
+    width: 35%;
+  }
+}
