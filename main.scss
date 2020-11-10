@@ -2,6 +2,11 @@
 @use './partials/components/asset_landpage.scss';
 @use './partials/components/index.scss';
 
+html,
+body {
+  @include u.body-reset;
+}
+
 h1 {
   font-family: u.font(bold);
 }
