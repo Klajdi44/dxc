@@ -50,13 +50,10 @@ document.querySelector('form').addEventListener('submit', (e) => {
   };
 
   //if form is valid do this
-  if (form.reportValidity()) {
-
+  if (form.checkValidity()) {
     post(data)
     localStorageFn();
-
   }
-
 });
 
 
@@ -69,7 +66,11 @@ function localStorageFn() {
 function validation(form) {
   const nameSpan = document.querySelector('.name')
   const emailSpan = document.querySelector('.email');
-  const nameIsValid = form.elements.full_name.reportValidity();
+  const companySpan = document.querySelector('.company');
+  const jobSpan = document.querySelector('.job');
+  const countrySpan = document.querySelector('.country');
+  const consentSpan = document.querySelector('.consent');
+  const nameIsValid = form.elements.full_name.checkValidity();
   const emailIsValid = form.elements.email.checkValidity();
   const companyIsValid = form.elements.company.checkValidity();
   const jobTitleIsValid = form.elements.job_title.checkValidity();
@@ -88,7 +89,7 @@ function validation(form) {
 
   if (!emailIsValid) {
     form.elements.email.focus();
-    emailSpan.textContent = 'Please include at least an "@" sign!'
+    emailSpan.textContent = 'Enter a valid email'
     emailSpan.classList.add('not-valid');
 
   } else {
@@ -96,4 +97,39 @@ function validation(form) {
     emailSpan.textContent = '  e.g. johndoe@company.com';
   }
 
+  if (!companyIsValid) {
+    form.elements.company.focus();
+    companySpan.textContent = 'Enter a valid company'
+    companySpan.classList.add('not-valid');
+
+  } else {
+    companySpan.classList.remove('not-valid');
+    companySpan.textContent = 'e.g. Project Manager'
+      ;
+  }
+  if (!jobTitleIsValid) {
+    form.elements.job_title.focus();
+    jobSpan.textContent = 'Enter your job title'
+    jobSpan.classList.add('not-valid');
+
+  } else {
+    jobSpan.classList.remove('not-valid');
+    jobSpan.textContent = 'e.g. Project Manager';
+  }
+  if (!countryIsValid) {
+    form.elements.country.focus();
+    countrySpan.textContent = 'Select a country to proceed'
+    countrySpan.classList.add('not-valid');
+
+  } else {
+    countrySpan.classList.remove('not-valid');
+    countrySpan.textContent = 'What is your country of residence?';
+  }
+  if (!consentIsValid) {
+    form.elements.consent.reportValidity();
+    consentSpan.classList.add('not-valid');
+
+  } else {
+    countrySpan.classList.remove('not-valid');
+  }
 }

@@ -79,7 +79,6 @@ select {
   width: 95%;
   border: 2px solid rgb(190, 190, 190);
   outline: 1px solid transparent;
-  border-radius: 20px;
   padding: 0.4em;
 }
 
@@ -88,7 +87,6 @@ input:not([type="checkbox"]) {
   width: 90%;
   border: 2px solid rgb(190, 190, 190);
   outline: 1px solid transparent;
-  border-radius: 20px;
   font-size: 1em;
   padding: 0.4em;
 }
@@ -101,7 +99,6 @@ input[type="checkbox"] {
 
 input:focus,
 select:focus {
-  border-radius: 20px;
   border: 2px solid u.color(purple);
   box-shadow: none;
 }
@@ -126,12 +123,21 @@ select:not(:focus):valid {
 
 .form-btn {
   text-decoration: none;
-  border-radius: 20px;
   padding: 0.5em 2em;
   background: u.color(purple);
   font-size: u.font-size(section-subtitle);
   font-family: u.font(bold);
   color: white;
+  border: 2px solid transparent;
+  transition: all 0.3s;
+  cursor: pointer;
+   
+  
+  &:hover {
+    background: transparent;
+    border: 2px solid u.color(purple);
+    color: #000;
+  }
 }
 
 /* animations */
